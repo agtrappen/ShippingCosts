@@ -1,0 +1,14 @@
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\bin\Release\netcoreapp3.1\DetermineShippingCosts.exe
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\bin\Release\netcoreapp3.1\DetermineShippingCosts.deps.json
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\bin\Release\netcoreapp3.1\DetermineShippingCosts.runtimeconfig.json
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\bin\Release\netcoreapp3.1\DetermineShippingCosts.runtimeconfig.dev.json
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\bin\Release\netcoreapp3.1\DetermineShippingCosts.dll
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\bin\Release\netcoreapp3.1\DetermineShippingCosts.pdb
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.csprojAssemblyReference.cache
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.AssemblyInfoInputs.cache
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.AssemblyInfo.cs
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.csproj.CoreCompileInputs.cache
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.dll
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.pdb
+D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\obj\Release\netcoreapp3.1\DetermineShippingCosts.genruntimeconfig.cache

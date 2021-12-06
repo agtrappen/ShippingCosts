@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "iVXdEJlZwsmlw2ztyxxsp8lHZlsSaT3Fmuw0rfl38Yn8N6bcPWbpbI2+H7vy31ztKsOpRbxhu5czJEia7LwvqA==",
+  "success": true,
+  "projectFilePath": "D:\\Avans\\Deeltijd\\Jaar2\\Periode2\\Kwaliteit_Testen\\Projecten\\DetermineShippingCosts\\DetermineShippingCostsTest\\DetermineShippingCostsTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.console\\3.12.0\\nunit.console.3.12.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.consolerunner\\3.13.0\\nunit.consolerunner.3.13.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.extension.nunitprojectloader\\3.6.0\\nunit.extension.nunitprojectloader.3.6.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.extension.nunitv2driver\\3.8.0\\nunit.extension.nunitv2driver.3.8.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.extension.nunitv2resultwriter\\3.6.0\\nunit.extension.nunitv2resultwriter.3.6.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.extension.teamcityeventlistener\\1.0.7\\nunit.extension.teamcityeventlistener.1.0.7.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.extension.vsprojectloader\\3.8.0\\nunit.extension.vsprojectloader.3.8.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\nunit.runners\\3.12.0\\nunit.runners.3.12.0.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\opencover\\4.7.1221\\opencover.4.7.1221.nupkg.sha512",
+    "C:\\Users\\stefan\\.nuget\\packages\\reportgenerator\\5.0.0\\reportgenerator.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

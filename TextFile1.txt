@@ -1,0 +1,137 @@
+@echo off
+
+SET dotnet="C:/Program Files/dotnet/dotnet.exe"  
+SET opencover="C:\Users\stefan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OpenCover\OpenCover Prompt.exe"  
+SET reportgenerator="C:/Users/stefan/Desktop/ReportGenerator_5.0.0/netcoreapp3.1/ReportGenerator.exe"
+
+SET sourcedir = "D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts"
+SET targetargs="D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\bin\Debug\netcoreapp3.1\DetermineShippingCostsTest.exe"
+SET coveragefile=Coverage.xml  
+SET coveragedir="D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\coverage"
+
+SET reportfile = index.htm
+SET reportdir = "D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\report"
+
+
+REM Run Opencover Prompt
+%opencover% -target:%targetargs% -output:%coveragefile% -register:user
+
+REM Run openCover ReportGenerator
+%ReportGenerator% -reports:%coveragefile% -targetdir:%reportdir%/%reportfile% -sourcedir:%souredir% -verbosity:Error
+
+REM Open the report
+start "report" %sourcedir%/reportdir/reportfile
+
+
+
+
+
+REM Run OpenCover - Not Working
+C:\Users\stefan\AppData\Local\Apps\OpenCover>Opencover.Console.exe -target:"D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCostsTest\bin\Debug\net5.0\DetermineShippingCosts.exe" -output:"D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\coverage.xml" -register:user
+
+REM Run ReportGenerator - Not Working
+C:\Users\stefan\Desktop\ReportGenerator_5.0.0\netcoreapp3.1>ReportGenerator.exe -reports:"D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\coverage.xml" -targetdir:"D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\report" sourcedirs:"D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCostsTest"
+
+@echo off
+REM Open the report - Works
+cd "D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\report"
+start index.htm
+
+
+
+
+"..\..\..\packages\OpenCover.4.7.1221\OpenCover.Console.exe" -target:"..\..\..\packages\NUnit.Runners.3.12.0\tools\nunit-console.exe" -targetargs:"/nologo DetermineShippingCostsTest.dll /noshadow" -filter:"+[DetermineShippingCosts]DetermineShippingCosts*" -excludebyattribute:"System.CodeDom.Compiler.GeneratedCodeAttribute" -register:user -output:"_CodeCoverageResult.xml"
+
+"..\..\..\packages\ReportGenerator.5.0.0\ReportGenerator.exe" "-reports:_CodeCoverageResult.xml" "-targetdir:_CodeCoverageReport"
+
+
+
+
+
+
+@ECHO OFF
+
+REM OpenCover-NUnit.bat
+
+REM Run opencover against NUnit tests in your test project and show report of code coverage
+
+REM Derivative work based on work by: 
+REM  Shaun Wilde - https://www.nuget.org/packages/OpenCover/
+REM  Daniel Palme - https://www.nuget.org/packages/ReportGenerator/
+REM  Charlie Poole - https://www.nuget.org/packages/NUnit.ConsoleRunner/
+REM  Allen Conway - 
+REM   http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.html
+REM  Andrew Newton - 
+REM   http://www.nootn.com.au/2014/01/code-coverage-with-opencover-example.html#.VxiNn_krLDc
+
+
+SET DllContainingTests=%~dp0WebApp.Tests\bin\Debug\DetermineShippingCostsTest.dll
+
+
+REM *** IMPORTANT - Change DllContainingTests variable (above) to point to the DLL 
+REM ***             in your solution containing your NUnit tests
+REM ***
+REM ***             You may also want to change the include/exclude filters (below) 
+REM ***             for OpenCover
+REM ***
+REM ***             This batch file should dbe placed in the root folder of your solution
+
+REM *** Before being able to use this to generate coverage reports you 
+REM *** will need the following NuGet packages
+REM PM> Install-Package OpenCover
+REM PM> Install-Package ReportGenerator
+REM PM> Install-Package NUnit.ConsoleRunner
+REM
+
+REM NUnit Test Runner (done this way so we dont have to change the code 
+REM when the version number changes)
+for /R "%~dp0packages" %%a in (*) do if /I "%%~nxa"=="nunit3-console.exe" SET TestRunnerExe=%%~dpnxa
+
+REM Get OpenCover Executable (done this way so we dont have to change the 
+REM code when the version number changes)
+for /R "%~dp0packages" %%a in (*) do if /I "%%~nxa"=="OpenCover.Console.exe" SET OpenCoverExe=%%~dpnxa
+
+REM Get Report Generator (done this way so we dont have to change the code 
+REM when the version number changes)
+for /R "%~dp0packages" %%a in (*) do if /I "%%~nxa"=="ReportGenerator.exe" 
+    SET ReportGeneratorExe=%%~dpnxa
+
+REM Create a 'GeneratedReports' folder if it does not exist
+if not exist "%~dp0GeneratedReports" mkdir "%~dp0GeneratedReports"
+
+REM Run the tests against the targeted output
+call :RunOpenCoverUnitTestMetrics
+
+REM Generate the report output based on the test results
+if %errorlevel% equ 0 ( 
+ call :RunReportGeneratorOutput 
+)
+
+REM Launch the report
+if %errorlevel% equ 0 ( 
+ call :RunLaunchReport 
+)
+exit /b %errorlevel%
+
+:RunOpenCoverUnitTestMetrics 
+REM *** Change the filter to include/exclude parts of the solution you want 
+REM *** to check for test coverage
+"%OpenCoverExe%" ^
+ -target:"%TestRunnerExe%" ^
+ -targetargs:"\"%DetermineShippingCostsTest%\"" ^
+ -filter:"+[*]* -[*.Tests*]* -[*]*.*Config" ^
+ -mergebyhash ^
+ -skipautoprops ^
+ -register:user ^
+ -output:"%~dp0GeneratedReports\CoverageReport.xml"
+exit /b %errorlevel%
+
+:RunReportGeneratorOutput
+"%ReportGeneratorExe%" ^
+ -reports:"%~dp0\GeneratedReports\CoverageReport.xml" ^
+ -targetdir:"%~dp0\GeneratedReports\ReportGenerator Output"
+exit /b %errorlevel%
+
+:RunLaunchReport
+start "report" "%~dp0\GeneratedReports\ReportGenerator Output\index.htm"
+exit /b %errorlevel%

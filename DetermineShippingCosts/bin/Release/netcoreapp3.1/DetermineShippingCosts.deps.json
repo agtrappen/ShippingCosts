@@ -1,0 +1,52 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DetermineShippingCosts/1.0.0": {
+        "dependencies": {
+          "OpenCover": "4.7.1221",
+          "ReportGenerator": "5.0.0",
+          "coverlet.msbuild": "3.1.0"
+        },
+        "runtime": {
+          "DetermineShippingCosts.dll": {}
+        }
+      },
+      "coverlet.msbuild/3.1.0": {},
+      "OpenCover/4.7.1221": {},
+      "ReportGenerator/5.0.0": {}
+    }
+  },
+  "libraries": {
+    "DetermineShippingCosts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "coverlet.msbuild/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xOv5HZagq0I6uF4vt8NVVpwcA2W/uGmNcbLStao2eMk98RQH5NFPQuouh2nWWPSZrNIhGG/iYbBn2pO4s5i+ig==",
+      "path": "coverlet.msbuild/3.1.0",
+      "hashPath": "coverlet.msbuild.3.1.0.nupkg.sha512"
+    },
+    "OpenCover/4.7.1221": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XZsMfTpbGnqLWCQjOeLlbDUU0lazJHbyEX52d7oRSuQX7Ve+23nfk4TF/F61hS382IEHB8WvUwkPB2IIA9WqEQ==",
+      "path": "opencover/4.7.1221",
+      "hashPath": "opencover.4.7.1221.nupkg.sha512"
+    },
+    "ReportGenerator/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3MplI53TO6tUnNqm95IosQArFZYsSeayZMTKsdZiKNtdsD8Yf5RmzFqZJwnuwcJuEsWTc2GQNuE9qFJMaYf3ZA==",
+      "path": "reportgenerator/5.0.0",
+      "hashPath": "reportgenerator.5.0.0.nupkg.sha512"
+    }
+  }
+}

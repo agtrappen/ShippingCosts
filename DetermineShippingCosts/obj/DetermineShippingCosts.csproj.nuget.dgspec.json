@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Avans\\Deeltijd\\Jaar2\\Periode2\\Kwaliteit_Testen\\Projecten\\DetermineShippingCosts\\DetermineShippingCosts\\DetermineShippingCosts.csproj": {}
+  },
+  "projects": {
+    "D:\\Avans\\Deeltijd\\Jaar2\\Periode2\\Kwaliteit_Testen\\Projecten\\DetermineShippingCosts\\DetermineShippingCosts\\DetermineShippingCosts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Avans\\Deeltijd\\Jaar2\\Periode2\\Kwaliteit_Testen\\Projecten\\DetermineShippingCosts\\DetermineShippingCosts\\DetermineShippingCosts.csproj",
+        "projectName": "DetermineShippingCosts",
+        "projectPath": "D:\\Avans\\Deeltijd\\Jaar2\\Periode2\\Kwaliteit_Testen\\Projecten\\DetermineShippingCosts\\DetermineShippingCosts\\DetermineShippingCosts.csproj",
+        "packagesPath": "C:\\Users\\stefan\\.nuget\\packages\\",
+        "outputPath": "D:\\Avans\\Deeltijd\\Jaar2\\Periode2\\Kwaliteit_Testen\\Projecten\\DetermineShippingCosts\\DetermineShippingCosts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "NUnit.ConsoleRunner": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "NUnit.Runners": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "OpenCover": {
+              "target": "Package",
+              "version": "[4.7.1221, )"
+            },
+            "ReportGenerator": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\PROGRA~1\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
