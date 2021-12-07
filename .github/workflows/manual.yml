@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   build:
-    name:  Buildspice
+    name:  Build test
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
@@ -28,4 +28,4 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Unit Tests
-      run: dotnet test SpiceTheWorld.Tests --no-restore --verbosity Minimal   
+      run: dotnet test DetermineShippingCostsTest --no-restore --verbosity Minimal   
