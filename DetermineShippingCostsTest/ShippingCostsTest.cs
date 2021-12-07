@@ -23,7 +23,7 @@ namespace DetermineShippingCostsTest
 
             // Assert
             
-            Assert.Equals(25000, totalCosts);
+            Assert.Equals(250, totalCosts);
         }
 
         [Test]
