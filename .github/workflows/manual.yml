@@ -2,17 +2,30 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
-    name: Dotnet Side by Side testing sample
+    name:  Buildspice
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '2.1.x'
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '5.0.x'
-      - run: dotnet build DetermineShippingCostsTest
-      - run: dotnet test DetermineShippingCostsTest
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+      uses: actions/setup-dotnet@v1.7.2
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      
+  unittests:      
+    needs: build
+    name:  Unit Testing
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+      uses: actions/setup-dotnet@v1.7.2
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Unit Tests
+      run: dotnet test SpiceTheWorld.Tests --no-restore --verbosity Minimal   
