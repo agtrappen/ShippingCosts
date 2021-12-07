@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Users/alexandertrappenberg/Sites/ShippingCosts/DetermineShippingCosts/Shipping.cs" />
+    <Compile Include="Macintosh HD/Users/alexandertrappenberg/Sites/ShippingCosts/DetermineShippingCosts/Shipping.cs" />
   </ItemGroup>
 
   <ItemGroup>
