@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="D:\Avans\Deeltijd\Jaar2\Periode2\Kwaliteit_Testen\Projecten\DetermineShippingCosts\DetermineShippingCosts\Shipping.cs" />
+    <Compile Include="/Users/alexandertrappenberg/Sites/ShippingCosts/DetermineShippingCosts/Shipping.cs" />
   </ItemGroup>
 
   <ItemGroup>
