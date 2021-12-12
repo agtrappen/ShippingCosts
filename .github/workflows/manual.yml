@@ -45,3 +45,19 @@ jobs:
     - name: SoapUI Tests
       working-directory: ./SoapUI
       run: ./testrunner.bat "/Users/alexandertrappenberg/Sites/ShippingCosts/SoapUI/DemoWebshop-soapui-project.xml"
+      
+  neoload:      
+    needs: build
+    name:  NeoLoad Testing
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+      uses: actions/setup-dotnet@v1.7.2
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Install dependencies
+      run: dotnet restore
+    - name: NeoLoad Tests
+      working-directory: ./NeoLoad
+      run: /Users/alexandertrappenberg/Sites/ShippingCosts/NeoLoad/AvansWebshopDemo.nlp -launch scenario1 -report
