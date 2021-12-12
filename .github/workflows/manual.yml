@@ -60,4 +60,4 @@ jobs:
       run: dotnet restore
     - name: NeoLoad Tests
       working-directory: ./NeoLoad
-      run: /Users/alexandertrappenberg/Sites/ShippingCosts/NeoLoad/AvansWebshopDemo.nlp -launch scenario1 -report
+      run: ./AvansWebshopDemo.nlp -launch scenario1 -report
