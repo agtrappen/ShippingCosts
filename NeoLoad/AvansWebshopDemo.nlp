@@ -1,0 +1,14 @@
+# Project description file
+
+project.name=AvansWebshopDemo
+project.version=8.3
+project.original.version=8.3
+product.name=NeoLoad
+product.original.name=NeoLoad
+product.version=7.11.1
+product.original.version=7.11.1
+project.is-open-test-settings-after-upload=false
+project.id=3afd80d8-c705-4fa8-aa3d-02a6d91cd33f
+project.config.path=config.zip
+project.config.storage=ZIP
+team.server.enabled=false
