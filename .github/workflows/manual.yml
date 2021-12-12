@@ -43,4 +43,4 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: SoapUI Tests
-      run: dotnet test --logger "junit;LogFilePathSoapUI/DemoWebshope-soapui-project.xml" 
+      run: dotnet test --logger "junit;LogFilePathSoapUI/DemoWebshop-soapui-project.xml" 
