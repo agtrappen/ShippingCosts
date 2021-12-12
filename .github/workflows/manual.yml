@@ -44,4 +44,4 @@ jobs:
       run: dotnet restore
     - name: SoapUI Tests
       working-directory: ./SoapUI
-      run: testrunner.bat "/Users/alexandertrappenberg/Sites/ShippingCosts/SoapUI/DemoWebshop-soapui-project.xml"
+      run: ./testrunner.bat "/Users/alexandertrappenberg/Sites/ShippingCosts/SoapUI/DemoWebshop-soapui-project.xml"
