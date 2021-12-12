@@ -43,4 +43,5 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: SoapUI Tests
+      working-directory: ./SoapUI
       run: testrunner.bat "/Users/alexandertrappenberg/Sites/ShippingCosts/SoapUI/DemoWebshop-soapui-project.xml"
